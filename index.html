@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+  <script src="bower_components/highcharts-ng/src/highcharts-ng.js"></script>
+  <script src="http://code.highcharts.com/stock/highstock.src.js"></script>
+  <script src="app.js"></script>
+  <script src="pie_chart.js"></script>
+  <title>Highcharts and Angular Example</title>
+</head>
+<body ng-app='myApp'>
+  <div ng-controller='barChart'>
+    <highchart config="chartConfig"></highchart>
+
+    <button ng-click='defaultStuff()'>Defaults (mostly)</button>
+    <button ng-click='sweetTitle()'>Change Title to 'Sweeet!'</button>
+    <button ng-click='dudeTitle()'>Change Title to 'Dude!'</button>
+  </div>
+
+  <div ng-controller='pieChart'>
+    <highchart config='myPieChartConfig'></highchart>
+  </div>
+</body>
+</html>
